@@ -32,7 +32,7 @@ code {
 /* Grid layout for Pokémon cards */
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Set to 6 columns */
+  grid-template-columns: repeat(5, 1fr); /* Set to 5 columns */
   gap: 20px; /* Space between the grid items */
   justify-content: center; /* Center the grid items */
 }
@@ -69,7 +69,6 @@ code {
   background-color: #f8d030; /* Change background color on hover (yellow) */
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
-
 
 /* Pagination styling */
 .pagination {
@@ -110,4 +109,51 @@ code {
   font-size: 16px; /* Font size for the page number */
   color: #333; /* Dark color for text */
   margin: 0 15px; /* Space around the text */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+  }
+
+  .pokemon-image {
+    width: 80px; /* Slightly smaller images */
+    height: 80px; /* Slightly smaller images */
+  }
+
+  .pokemon-name {
+    font-size: 16px; /* Smaller font size for names */
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+  }
+
+  .pokemon-card {
+    padding: 10px; /* Less padding for cards */
+  }
+
+  .pokemon-image {
+    width: 60px; /* Smaller images for mobile */
+    height: 60px; /* Smaller images for mobile */
+  }
+
+  .pokemon-name {
+    font-size: 14px; /* Smaller font size for names */
+  }
+
+  .pagination button {
+    font-size: 14px; /* Smaller font size for buttons */
+    padding: 8px 10px; /* Less padding for buttons */
+  }
+
+  .pagination span {
+    font-size: 14px; /* Smaller font size for page numbers */
+  }
 }
