@@ -11,3 +11,103 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* PokemonList.css */
+
+/* Main container for the Pokémon list */
+.pokemon-container {
+  background-color: #f0f8ff; /* Light blue background color for the container */
+  padding: 20px;
+  min-height: 100vh; /* Ensure it takes at least the full height of the viewport */
+}
+
+/* Header styling */
+.pokemon-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Grid layout for Pokémon cards */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Set to 6 columns */
+  gap: 20px; /* Space between the grid items */
+  justify-content: center; /* Center the grid items */
+}
+
+/* Individual card styling */
+.pokemon-card {
+  background-color: #ffffff; /* White background for each card */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  padding: 15px; /* Padding inside the card */
+  text-align: center; /* Center text inside the card */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Pokémon image styling */
+.pokemon-image {
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  object-fit: cover; /* Ensure the image fits nicely within its container */
+  margin-bottom: 10px; /* Space between image and name */
+}
+
+/* Pokémon name styling */
+.pokemon-name {
+  text-transform: capitalize; /* Capitalize the first letter */
+  font-size: 18px; /* Font size for names */
+  color: #333; /* Dark color for text */
+}
+
+/* Hover effect for Pokémon cards */
+.pokemon-card:hover {
+  background-color: #f8d030; /* Change background color on hover (yellow) */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+/* Pagination styling */
+.pagination {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center align the items */
+  margin-top: 20px; /* Space above the pagination */
+  margin-bottom: 20px; /* Space below the pagination */
+}
+
+.pagination button {
+  background-color: #f8d030; /* Yellow background for buttons */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  color: #333; /* Dark text color */
+  font-size: 16px; /* Font size */
+  padding: 10px 15px; /* Padding inside the button */
+  margin: 0 10px; /* Space between buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for buttons */
+.pagination button:hover:not(:disabled) {
+  background-color: #e0c020; /* Darker yellow on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Disabled button styles */
+.pagination button:disabled {
+  background-color: #ddd; /* Light gray background for disabled buttons */
+  color: #aaa; /* Gray text for disabled buttons */
+  cursor: not-allowed; /* Not-allowed cursor */
+}
+
+/* Styles for the page number display */
+.pagination span {
+  align-self: center; /* Center the text vertically */
+  font-size: 16px; /* Font size for the page number */
+  color: #333; /* Dark color for text */
+  margin: 0 15px; /* Space around the text */
+}
